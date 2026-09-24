@@ -6,7 +6,10 @@ readme = "README.md"
 license = "BSD"
 author = "CERN"
 requires-python = ">=3.12"
-dependencies = []
+dependencies = [
+    "flask>=3,<4",
+    "flask-menu>=2,<3",
+]
 
 [dependency-groups]
 dev = [
