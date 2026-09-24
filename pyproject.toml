@@ -1,0 +1,9 @@
+[project]
+name = "flask-breadcrumbs"
+version = "0.1.0"
+description = "Flask-Breadcrumbs adds support for generating site breadcrumb navigation."
+readme = "README.md"
+license = "BSD"
+author = "CERN"
+requires-python = ">=3.12"
+dependencies = []
