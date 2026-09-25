@@ -3,7 +3,6 @@ name = "flask-breadcrumbs"
 version = "0.1.0"
 description = "Flask-Breadcrumbs adds support for generating site breadcrumb navigation."
 readme = "README.md"
-license = "BSD"
 author = "CERN"
 requires-python = ">=3.12"
 dependencies = [
@@ -13,6 +12,14 @@ dependencies = [
 
 [dependency-groups]
 dev = [
+    "pytest>=9.1.1",
     "ruff>=0.16.8",
     "ty>=0.0.83",
 ]
+
+[build-system]
+requires = ["uv_build>=0.12.1,<0.13.0"]
+build-backend = "uv_build"
+
+[tool.pytest]
+testpaths = ["tests"]
