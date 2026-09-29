@@ -4,11 +4,20 @@ version = "0.1.0"
 description = "Flask-Breadcrumbs adds support for generating site breadcrumb navigation."
 readme = "README.md"
 author = "CERN"
+license = "BSD-3-Clause"
 requires-python = ">=3.12"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
 dependencies = [
     "flask>=3,<4",
     "flask-menu>=2,<3",
 ]
+
+[project.urls]
+Homepage = "https://github.com/ansipunk/flask-breadcrumbs-2"
+Issues = "https://github.com/ansipunk/flask-breadcrumbs-2/issues"
 
 [dependency-groups]
 dev = [
