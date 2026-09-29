@@ -1,12 +1,14 @@
-.PHONY: help static format test clean
+.PHONY: help static format test build publish clean
 
 help:
 	@echo "Available targets:"
-	@echo "  help   - show this text"
-	@echo "  static - run static code analysis"
-	@echo "  format - run auto code formatter"
-	@echo "  test   - run project tests"
-	@echo "  clean  - clean cache and artifacts"
+	@echo "  help    - show this text"
+	@echo "  static  - run static code analysis"
+	@echo "  format  - run auto code formatter"
+	@echo "  test    - run project tests"
+	@echo "  build   - build the package"
+	@echo "  publish - upload the package to PyPi"
+	@echo "  clean   - clean cache and artifacts"
 
 static:
 	uv run ruff check src
@@ -20,6 +22,12 @@ format:
 test:
 	uv run pytest
 
+build:
+	uv build
+
+publish:
+	uv publish
+
 clean:
-	rm -rf .venv .ruff_cache .pytest_cache
+	rm -rf .venv .ruff_cache .pytest_cache dist
 	find . -type d -name __pycache__ -prune -exec rm -rf {} +
