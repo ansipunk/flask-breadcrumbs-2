@@ -47,7 +47,7 @@ wheels = [
 ]
 
 [[package]]
-name = "flask-breadcrumbs"
+name = "flask-breadcrumbs-2"
 version = "0.1.0"
 source = { editable = "." }
 dependencies = [
